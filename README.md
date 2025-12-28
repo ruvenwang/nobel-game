@@ -20,35 +20,21 @@ This service will run at `http://localhost:8000`.
 ```bash
 cd backend
 
-2. Start the Frontend (React)
-This service will typically run at http://localhost:5173.
+### 2. Start the Frontend (React)
 
-Bash
+This service will typically run at `http://localhost:5173`.
 
+```bash
 # Make sure you are in the root folder (not inside /backend)
+
 # Install JavaScript dependencies
 npm install
 
 # Start the development server
 npm run dev
-Tech Stack
-Frontend: React, Vite
 
-Backend: Python, Uvicorn
+## Tech Stack
 
-Data Source: Official Nobel Prize API
-
-
-### What I changed:
-1.  **Removed Auto-generated Fluff:** I deleted the sections about "React Compiler," "ESLint," and "Babel vs SWC." These are default settings for the developer and are not relevant to someone trying to run the app.
-2.  **Completed the Frontend Section:** Your original text was missing the commands for the frontend. I added `npm install` and `npm run dev`, which are standard for Vite projects.
-3.  **Added Structure:** I used a horizontal rule (`---`) to separate the introduction from the instructions.
-
-**Next Step:**
-Would you like me to generate a `requirements.txt` file for your backend if you don't have one yet?
-
-# Install Python dependencies
-pip3 install -r requirements.txt
-
-# Start the server
-uvicorn main:app --reload
+- **Frontend:** React, Vite
+- **Backend:** Python, Uvicorn
+- **Data Source:** Official Nobel Prize API
