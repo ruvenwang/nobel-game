@@ -1,0 +1,155 @@
+.game-area {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.message {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-top: 2rem;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.speak-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    padding: 0 0.5rem;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.speak-btn:hover {
+    transform: scale(1.2);
+    background: none;
+}
+
+.game-over {
+    text-align: center;
+    padding: 3rem;
+    background-color: var(--secondary-color);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.game-over h2 {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.final-score {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.restart-btn {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+
+.restart-btn:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+.laureate-reveal {
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.question-card {
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.question-card h3 {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    color: white;
+}
+
+.question-card h3::first-letter {
+    text-transform: uppercase;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.option-btn {
+    padding: 1.5rem;
+    font-size: 1.1rem;
+    background-color: #34495e;
+    border: 2px solid transparent;
+}
+
+.option-btn:hover:not(:disabled) {
+    background-color: #2c3e50;
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.option-btn.correct {
+    background-color: #27ae60 !important;
+    border-color: #2ecc71;
+}
+
+/* Note: Since we don't track clicked ID in JS yet, we can't style the specific wrong button easily without extra state. */
+/* Just showing correct answer is enough for MVP feedback */
+
+.feedback {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.feedback.correct {
+    color: #2ecc71;
+    background-color: rgba(46, 204, 113, 0.1);
+}
+
+.feedback.incorrect {
+    color: #e74c3c;
+    background-color: rgba(231, 76, 60, 0.1);
+}
+
+@media (max-width: 600px) {
+    .options-grid {
+        grid-template-columns: 1fr;
+    }
+}
