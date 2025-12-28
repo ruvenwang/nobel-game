@@ -7,6 +7,20 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
+## How to Run
+
+### 1. Backend (Python)
+The backend proxies data from the official Nobel Prize API to avoid CORS issues and allow for future extension.
+
+```bash
+cd backend
+pip3 install -r requirements.txt
+uvicorn main:app --reload
+```
+The API will run at `http://localhost:8000`.
+
+### 2. Frontend (React)
+
 ## React Compiler
 
 The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).

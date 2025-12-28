@@ -2,7 +2,7 @@
  * Service to fetch and manage Nobel Prize data
  */
 
-const API_URL = 'http://api.nobelprize.org/v1/prize.json';
+const API_URL = 'http://localhost:8000/api/prizes';
 
 export const fetchNobelPrizes = async () => {
     try {
