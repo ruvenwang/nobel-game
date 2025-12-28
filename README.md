@@ -7,7 +7,9 @@ It consists of two parts:
 2.  **Backend:** A Python service that acts as a proxy to the official Nobel Prize API.
 
 > **Note:** The Python backend is necessary to avoid CORS (Cross-Origin Resource Sharing) issues that occur when the browser tries to connect directly to the Nobel Prize API.
-https://github.com/ruvenwang/nobel-game/blob/main/README.md
+
+[https://github.com/ruvenwang/nobel-game/blob/main/README.md](https://github.com/ruvenwang/nobel-game/blob/main/README.md)
+
 ---
 
 ## How to Run
@@ -20,7 +22,15 @@ This service will run at `http://localhost:8000`.
 ```bash
 cd backend
 
+# Install Python dependencies
+pip install -r requirements.txt
+
+# Start the server (Replace 'app.py' with your actual file name if different)
+python app.py
+```
+
 ---
+
 ### 2. Start the Frontend (React)
 
 This service will typically run at `http://localhost:5173`.
@@ -33,6 +43,7 @@ npm install
 
 # Start the development server
 npm run dev
+```
 
 ## Tech Stack
 
