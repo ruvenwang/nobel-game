@@ -1,30 +1,27 @@
-# React + Vite
+# Nobel Prize App (React + Python)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a minimal web application that fetches and displays Nobel Prize data.
 
-Currently, two official plugins are available:
+It consists of two parts:
+1.  **Frontend:** Built with React and Vite for a fast user interface.
+2.  **Backend:** A Python service that acts as a proxy to the official Nobel Prize API.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> **Note:** The Python backend is necessary to avoid CORS (Cross-Origin Resource Sharing) issues that occur when the browser tries to connect directly to the Nobel Prize API.
+https://github.com/ruvenwang/nobel-game/blob/main/README.md
+---
 
 ## How to Run
 
-### 1. Backend (Python)
-The backend proxies data from the official Nobel Prize API to avoid CORS issues and allow for future extension.
+You will need to open **two** terminal windows to run this project (one for the backend, one for the frontend).
+
+### 1. Start the Backend (Python)
+This service will run at `http://localhost:8000`.
 
 ```bash
 cd backend
+
+# Install Python dependencies
 pip3 install -r requirements.txt
+
+# Start the server
 uvicorn main:app --reload
-```
-The API will run at `http://localhost:8000`.
-
-### 2. Frontend (React)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
