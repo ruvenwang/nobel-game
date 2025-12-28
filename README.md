@@ -20,6 +20,7 @@ This service will run at `http://localhost:8000`.
 ```bash
 cd backend
 
+---
 ### 2. Start the Frontend (React)
 
 This service will typically run at `http://localhost:5173`.
